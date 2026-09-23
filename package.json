@@ -1,0 +1,24 @@
+{
+  "name": "invoice-workspace-gscript",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "tsc --noEmit && node scripts/build.mjs",
+    "build:test": "node scripts/build-test.mjs",
+    "push": "npm run build && clasp push --force",
+    "test": "npm run build && npm run build:test && node --test \"test/**/*.test.mjs\""
+  },
+  "engines": {
+    "node": ">=22.17.0"
+  },
+  "private": true,
+  "license": "UNLICENSED",
+  "dependencies": {
+    "fast-xml-parser": "^5.11.1"
+  },
+  "devDependencies": {
+    "@google/clasp": "^3.4.0",
+    "@types/google-apps-script": "^2.0.12",
+    "esbuild": "^0.28.2",
+    "typescript": "^7.0.2"
+  }
+}

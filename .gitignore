@@ -1,0 +1,21 @@
+.agent
+.internal
+node_modules
+
+# clasp (copy .clasp.json.example → .clasp.json and set scriptId)
+.clasp.json
+.clasprc.json
+
+# secrets
+.env
+.env.*
+credentials.json
+*.pem
+*.key
+
+dist/
+.test-dist/
+.fallow/
+
+# Local until the suite is ready to publish.
+test
